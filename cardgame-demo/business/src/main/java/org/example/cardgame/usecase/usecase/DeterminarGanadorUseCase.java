@@ -26,12 +26,18 @@ public class DeterminarGanadorUseCase  extends UseCaseForEvent<RondaTerminada> {
                 .collectList()
                 .flatMapIterable(events -> {
                     var juego = Juego.from(JuegoId.of(event.aggregateRootId()), events);
-                    var competidores = juego.jugadores().values().stream()
+                    var jugadores = juego.jugadores().values().stream()
                             .filter(jugador -> jugador.mazo().value().cantidad() > 0)
                             .collect(Collectors.toList());
-                    if(competidores.size()  == 1){
-                        var jugador = competidores.get(0);
+                    var competidores = event.getJugadorIds();
+                    if(jugadores.size()  == 1){
+                        var jugador = jugadores.get(0);
                         juego.finalizarJuego(jugador.identity(), jugador.alias());
+                    } else if (competidores.size() == 1) {
+                        competidores.stream().findFirst().ifPresent(jugadorId -> {
+                            var jugador = juego.jugadores().get(jugadorId);
+                            juego.finalizarJuego(jugador.identity(), jugador.alias());
+                        });
                     }
                     return juego.getUncommittedChanges();
                 }));

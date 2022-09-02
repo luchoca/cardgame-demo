@@ -38,7 +38,7 @@
                         </mat-card-content>
 
                         <mat-card-actions>
-                            <button mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada}}">
+                            <button mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada || !roundStarted}}">
                                 MOVER A TABLERO
                             </button>
                         </mat-card-actions>

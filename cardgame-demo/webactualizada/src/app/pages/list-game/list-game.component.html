@@ -22,18 +22,24 @@
                          </td>
                      </ng-container>
                      <ng-container matColumnDef="iniciado">
-                         <th mat-header-cell *matHeaderCellDef> ¿Esta iniciada? </th>
-                         <td mat-cell *matCellDef="let element"> {{element.iniciado? 'SI': 'NO'}} </td>
+                         <th mat-header-cell *matHeaderCellDef> Estado</th>
+                         <td mat-cell *matCellDef="let element"> 
+                            <span *ngIf="!element.finalizado">{{element.iniciado? 'INICIADA': 'CREADA'}}</span>
+                            <span *ngIf="element.finalizado">FINALIZADO</span>
+                        </td>
                      </ng-container>
                      <ng-container matColumnDef="id">
                          <th mat-header-cell *matHeaderCellDef> Accion </th>
-                         <td mat-cell *matCellDef="let element">
-                             <div *ngIf="element.iniciado">
-                                 <button mat-button (click)="entrar(element.id)">UNIRSE</button>
-                             </div>
-                             <div *ngIf="!element.iniciado">
-                                 <button mat-button (click)="iniciar(element.id)">INICIAR</button>
-                             </div>
+                         <td mat-cell *matCellDef="let element;">
+                            <div *ngIf="!element.finalizado">
+                                <div *ngIf="element.iniciado">
+                                    <button mat-button (click)="entrar(element.id)">UNIRSE</button>
+                                </div>
+                                <div *ngIf="!element.iniciado">
+                                    <button mat-button (click)="iniciar(element.id)">INICIAR</button>
+                                </div>
+                            </div>
+                            
                          </td>
                      </ng-container>
  

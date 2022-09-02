@@ -61,7 +61,7 @@ export class BoardComponent implements OnInit, OnDestroy {
               cartaId: event.carta.cartaId.uuid,
               poder: event.carta.poder,
               estaOculta: event.carta.estaOculta,
-              estaHabilitada: event.carta.estaHabilitada,
+              estaHabilitada: false
             });
           }
           if (event.type === 'cardgame.cartaquitadadelmazo') {

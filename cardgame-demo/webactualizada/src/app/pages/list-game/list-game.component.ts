@@ -13,7 +13,7 @@ import { WebsocketService } from 'src/app/shared/services/websocket.service';
 })
 export class ListGameComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['alias', 'cantidad', 'iniciado', 'id'];
-  dataSource: JuegoModel[] = [];
+  dataSource: any[] = [];
   constructor(
     public api: ApiService,
     public authService: AuthService,
