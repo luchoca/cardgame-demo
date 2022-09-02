@@ -1,0 +1,29 @@
+.contenedor{
+    height: 100vh;
+    width: 60vw;
+    margin: 10px 300px 10px 300px;
+    border-radius:3%;
+    text-align: center;
+    border: rgb(219, 93, 93) solid;
+    -webkit-border-radius:3%;
+    -moz-border-radius:3%;
+    -ms-border-radius:3%;
+    -o-border-radius:3%;
+}
+h3{
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(206, 173, 173);
+    border-bottom: rgb(219, 93, 93) solid;
+    border-radius: 4%;
+    -webkit-border-radius: 4%;
+    -moz-border-radius: 4%;
+    -ms-border-radius: 4%;
+    -o-border-radius: 4%;
+}
+.contenedor2{
+    margin: auto;
+}
+form{
+    margin: 50px;
+}
