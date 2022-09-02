@@ -1,9 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { element } from 'protractor';
 import { JuegoModel } from 'src/app/shared/model/juego';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { WebsocketService } from 'src/app/shared/services/websocket.service';
+import { runInThisContext } from 'vm';
 
 
 @Component({
@@ -13,7 +15,7 @@ import { WebsocketService } from 'src/app/shared/services/websocket.service';
 })
 export class ListGameComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['alias', 'cantidad', 'iniciado', 'id'];
-  dataSource: any[] = [];
+  dataSource: JuegoModel[] = [];
   constructor(
     public api: ApiService,
     public authService: AuthService,
@@ -26,9 +28,13 @@ export class ListGameComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.api.getMisJuegos(this.authService.user.uid).subscribe((elements) => {
-      this.dataSource = elements;
-    });
+    this.api.getAllJuegos().subscribe((juegos)=>{
+      this.dataSource = juegos.filter((juego)=>this.authService.user.uid in juego.jugadores)
+
+    })
+    // this.api.getMisJuegos(this.authService.user.uid).subscribe((elements) => {
+    //   this.dataSource = elements;
+    // });
   }
 
   entrar(id: string) {
