@@ -34,8 +34,8 @@
 //        //ARRANGE
 //        var command = new PonerCartaEnTablero();
 //        command.setJuegoId("XXXX");
-//        command.setJugadorId("tony");
-//        command.setCartaId("pacheco");
+//        command.setJugadorId("MESSI");
+//        command.setCartaId("CARAÑERY");
 //
 //
 //        when(repository.obtenerEventosPor("XXXX")).thenReturn(history());
@@ -46,27 +46,27 @@
 //                .expectNextMatches(domainEvent -> {
 //                    var event = (CartaPuestaEnTablero) domainEvent;
 //                    return event.aggregateRootId().equals("XXXX")
-//                            && event.getCarta().value().cartaId().value().equals("pacheco")
-//                            && event.getJugadorId().value().equals("tony")
+//                            && event.getCarta().value().cartaId().value().equals("CARAÑERY")
+//                            && event.getJugadorId().value().equals("MESSI")
 //                            && event.getTableroId().value().equals("XXXX");
 //                })
 //                .expectNextMatches(domainEvent -> {
 //                    var event = (CartaQuitadaDelMazo) domainEvent;
 //                    return event.aggregateRootId().equals("XXXX")
-//                            && event.getJugadorId().value().equals("tony")
-//                            && event.getCarta().value().cartaId().value().equals("pacheco");
+//                            && event.getJugadorId().value().equals("MESSI")
+//                            && event.getCarta().value().cartaId().value().equals("CARAÑERY");
 //                })
 //                .expectComplete()
 //                .verify();
 //    }
 //
 //    private Flux<DomainEvent> history() {
-//        var event = new JuegoCreado(JugadorId.of("tony"));
+//        var event = new JuegoCreado(JugadorId.of("MESSI"));
 //
 //        var event2 = new JugadorAgregado(
-//                JugadorId.of("tony"),"GIANNI",
+//                JugadorId.of("MESSI"),"GIANNI",
 //                new Mazo(Set.of(
-//                        new Carta(CartaMaestraId.of("pacheco"), 10,true,true),
+//                        new Carta(CartaMaestraId.of("CARAÑERY"), 10,true,true),
 //                        new Carta(CartaMaestraId.of("bbb"), 102,true,true),
 //                        new Carta(CartaMaestraId.of("ccc"), 101,true,true),
 //                        new Carta(CartaMaestraId.of("ddd"), 104,true,true),
@@ -76,7 +76,7 @@
 //
 //        var event3 = new TableroCreado(TableroId.of("XXXX"),
 //                Set.of(
-//                        JugadorId.of("tony"),
+//                        JugadorId.of("MESSI"),
 //                        JugadorId.of("GGGG"),
 //                        JugadorId.of("HHHH")
 //                )
@@ -84,9 +84,9 @@
 //
 //        var event4 = new RondaCreada(
 //                new Ronda(1,
-//                        Set.of(JugadorId.of("Lucho"),
-//                                JugadorId.of("Carlos"),
-//                                JugadorId.of("Martin"))),
+//                        Set.of(JugadorId.of("Gianni"),
+//                                JugadorId.of("Mati"),
+//                                JugadorId.of("Joaco"))),
 //                30);
 //
 //        var event5 = new RondaIniciada();

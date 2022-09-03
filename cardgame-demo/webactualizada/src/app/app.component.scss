@@ -3,25 +3,26 @@ mat-sidenav-content{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  scrollbar-width: none;
 }
 
 mat-sidenav-container {
     height: 91%;
     mat-sidenav {
-
       background-image: url(../assets/backgroundMarvel/marvel-fondo-app.webp);
       background-repeat: round;
-      background-size: cover;
       mat-nav-list {
         .menu-item {
-          font-size: 30px;
+          font-size: 20px;
           color: aliceblue;
+          scrollbar-width: none;
           // width: 150px;
         }
   
         .chevron-button {
           transition: 300ms ease-in-out;
           transform: rotate(0deg);
+          color:white;
         }
   
         .chevron-button.rotated {
@@ -35,6 +36,7 @@ mat-sidenav-container {
 }
   .item-lista{
     margin-top: 250px;
+    scrollbar-width: none;
   }
 
   .toolbar{
@@ -47,17 +49,4 @@ mat-sidenav-container {
 
   .example-spacer {
     flex:1 1 auto;
-  }
-
-  mat-icon{
-    margin: 0;
-  }
-
-  mat-list-item-content{
-    margin: 0;
-  }
-
-  .font1{
-    font-family: 'Roboto', sans-serif;
-  
   }

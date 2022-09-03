@@ -4,7 +4,7 @@
     <mat-nav-list>
 
       <mat-list-item (click)="isExpanded = !isExpanded">
-        <mat-icon class="mat-icon-sidebar" mat-list-iconclass="chevron-button"[ngClass]="{ rotated: isExpanded }">chevron_right
+        <mat-icon mat-list-icon class="chevron-button"[ngClass]="{ rotated: isExpanded }">chevron_right
         </mat-icon>
       </mat-list-item>
 
@@ -31,9 +31,6 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <!-- <mat-toolbar class="toolbar">
-      <h4>Marvel Card Game</h4>
-    </mat-toolbar> -->
     <mat-toolbar class="toolbar">
      <span>MARVEL CARD GAME</span>
      <span class="example-spacer"></span>

@@ -1,0 +1,10 @@
+
+P
+java:S1611"5Remove the parentheses around the "command" parameter(ç§·Áøÿÿÿÿ
+W
+java:S1854*"<Remove this useless assignment to local variable "cantidad".(€º•şÿÿÿÿ
+H
+java:S1481*"-Remove this unused "cantidad" local variable.(€º•şÿÿÿÿ
+Q	java:S125,"<This block of commented-out lines of code should be removed.(Å·å®
+J
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ

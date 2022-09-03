@@ -13,12 +13,9 @@ import java.util.stream.Collectors;
 
 public class DeterminarGanadorUseCase  extends UseCaseForEvent<RondaTerminada> {
     private final JuegoDomainEventRepository repository;
-
     public DeterminarGanadorUseCase(JuegoDomainEventRepository repository){
         this.repository = repository;
     }
-
-
     @Override
     public Flux<DomainEvent> apply(Mono<RondaTerminada> rondaTerminadaMono) {
         return rondaTerminadaMono.flatMapMany((event) -> repository
