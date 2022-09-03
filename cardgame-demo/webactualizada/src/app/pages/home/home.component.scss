@@ -1,7 +1,8 @@
 .homeContainer{
-    height: 90vh;
+    height: 60vh;
     width: 450px;
-    margin: auto;
+    margin-left: 10%;
+    margin-top: 7%;
     text-align: center;
     border-radius: 4%;
     -webkit-border-radius: 4%;
@@ -10,7 +11,7 @@
     -o-border-radius: 4%;
 }
 .contenedor{
-    border: solid 1px rgb(201, 190, 190);
+    // border: solid 1px rgb(220, 47, 47);
     margin: 3px;
     padding: 3px;
     border-radius: 4%;
@@ -20,7 +21,7 @@
     -o-border-radius: 4%;
 }
 h4{
-   background-color: rgb(218, 218, 218);
+   background-color: rgb(236, 90, 90);
    margin: 3px;
    padding: 3px;
    border-radius: 4%;

@@ -13,6 +13,9 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthGuard implements CanActivate {
+  signOut() {
+    throw new Error('Method not implemented.');
+  }
   constructor(public authService: AuthService, public router: Router) {}
 
   canActivate(

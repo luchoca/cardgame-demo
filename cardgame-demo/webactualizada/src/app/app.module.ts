@@ -25,10 +25,13 @@ import { environment } from 'src/environments/environment';
 import { BoardComponent } from './pages/board/board.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListGameComponent } from './pages/list-game/list-game.component';
-import { LoginComponent } from 'src/app/login/login.component';
 import { NewGameComponent } from './pages/new-game/new-game.component';
-import { HeaderComponent } from './componets/header/header.component';
 import { LoginModule } from './login/login.module';
+import { AuthService } from './shared/services/auth.service';
+import { MatInputModule } from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -63,8 +66,11 @@ import { LoginModule } from './login/login.module';
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    LoginModule
-    ],
+    LoginModule,
+    MatInputModule,
+    MatCheckboxModule,
+    // FontAwesomeModule
+      ],
   providers: [ApiService],
   bootstrap: [AppComponent],
   schemas:[

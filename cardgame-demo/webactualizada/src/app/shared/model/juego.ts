@@ -4,6 +4,7 @@ export interface JuegoModel {
     finalizado: boolean,
     cantidadJugadores: number,
     jugadores: Map<string,Jugador>
+    uid:string;
 
 }
 

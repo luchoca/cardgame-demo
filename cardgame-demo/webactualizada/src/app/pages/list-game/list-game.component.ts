@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { element } from 'protractor';
 import { JuegoModel } from 'src/app/shared/model/juego';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { WebsocketService } from 'src/app/shared/services/websocket.service';
-import { runInThisContext } from 'vm';
+
 
 
 @Component({

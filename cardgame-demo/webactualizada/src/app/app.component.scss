@@ -1,0 +1,63 @@
+mat-sidenav-content{
+  background-image: url(../assets/backgroundMarvel/wp2729574-marvels-wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+mat-sidenav-container {
+    height: 91%;
+    mat-sidenav {
+
+      background-image: url(../assets/backgroundMarvel/marvel-fondo-app.webp);
+      background-repeat: round;
+      background-size: cover;
+      mat-nav-list {
+        .menu-item {
+          font-size: 30px;
+          color: aliceblue;
+          // width: 150px;
+        }
+  
+        .chevron-button {
+          transition: 300ms ease-in-out;
+          transform: rotate(0deg);
+        }
+  
+        .chevron-button.rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+.mat-icon-sidebar{
+  color: white;
+}
+  .item-lista{
+    margin-top: 250px;
+  }
+
+  .toolbar{
+    background-image: url(../assets/backgroundMarvel/marvel-fondo-app.webp);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: aliceblue;
+  }
+
+  .example-spacer {
+    flex:1 1 auto;
+  }
+
+  mat-icon{
+    margin: 0;
+  }
+
+  mat-list-item-content{
+    margin: 0;
+  }
+
+  .font1{
+    font-family: 'Roboto', sans-serif;
+  
+  }
