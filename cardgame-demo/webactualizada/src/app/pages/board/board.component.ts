@@ -8,6 +8,7 @@ import { Carta } from 'src/app/shared/model/mazo';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { WebsocketService } from 'src/app/shared/services/websocket.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-board',
@@ -89,8 +90,14 @@ export class BoardComponent implements OnInit, OnDestroy {
           }
           if (event.type === 'cardgame.juegofinalizado') {
             alert(
-              'RAAAAAAAAAAAAAAAAAAUUUUUUUUUUUUUULLLLLLL TERMINEEEEEEEEEEEEEEEEE'
+              'ENHORABUENA HAS GANADO LA PARTIDA !'
             );
+            // Swal.fire({
+            //   title: 'Custom width, padding, color, background.',
+            //   width: 600,
+            //   padding: '3em',
+            //   color: '#716add'
+            // })
             this.router.navigate(['home'])
           }
 

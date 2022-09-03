@@ -53,7 +53,7 @@ public class JugadorAgregado extends DomainEvent {
         return mazo;
     }
 
-    public SuppressWarnings getJugadorId() {
-        return null;
+    public JugadorId getJugadorId() {
+        return identity;
     }
 }

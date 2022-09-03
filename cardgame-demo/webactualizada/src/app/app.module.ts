@@ -30,6 +30,7 @@ import { LoginModule } from './login/login.module';
 import { AuthService } from './shared/services/auth.service';
 import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -69,6 +70,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     LoginModule,
     MatInputModule,
     MatCheckboxModule,
+    // SweetAlert2Module
     // FontAwesomeModule
       ],
   providers: [ApiService],
