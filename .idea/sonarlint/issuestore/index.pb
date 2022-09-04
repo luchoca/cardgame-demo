@@ -9,8 +9,6 @@ ocardgame-demo/applications/app-service/src/main/java/org/example/cardgame/appli
 zcardgame-demo/applications/app-service/src/main/java/org/example/cardgame/application/handle/model/JuegoListViewModel.java,4\9\49115f3e533975b8b082a858c619593af2c795c0
 N
 cardgame-demo/business/pom.xml,d\5\d57704510ef764606e4acc138a9db7c7760eb9e0
-ê
-`cardgame-demo/business/src/main/java/org/example/cardgame/usecase/usecase/CrearJuegoUseCase.java,b\a\baf109b3fe8436909f2d312abe1c6dce431dc3a1
 í
 bcardgame-demo/business/src/main/java/org/example/cardgame/usecase/gateway/ListaDeCartaService.java,9\9\999f233bb5dce36331bbc8eb36c19ac7bbeb6b1f
 ê
@@ -31,15 +29,23 @@ fcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/Inici
 dcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/CrearRondaUseCaseTest.java,b\2\b2bfa7c5c6eadbe82337de08c718aac1e774ed78
 ñ
 fcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/IniciarJuegoUseCaseTest.java,8\d\8dad251cf138c8133702bcc87c3211a711524d28
-y
-Icardgame-demo/domain/src/main/java/org/example/cardgame/domain/Juego.java,e\8\e81b6767cea8d1efd4c389b89127120c24b8a3cb
-õ
-kcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/DeterminarGanadorUseCaseTest.java,f\6\f6478462bb8aced4ba2c3f2d405fc713f4c1c4c1
 ò
 hcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/FinalizarRondaUseCaseTest.java,8\a\8a4341a9d534bba1aaa78924fc23d48205a85f49
 ó
 gcardgame-demo/business/src/main/java/org/example/cardgame/usecase/usecase/DeterminarGanadorUseCase.java,a\5\a5d48daacb346b265453ccb9f2dbdd3e0e0ce395
 ù
 mcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/PonerCartaEnTableroUseCaseTest.java,f\0\f02578d873cf53ab97fb3cedbc178bacdeddd99c
+y
+Icardgame-demo/domain/src/main/java/org/example/cardgame/domain/Juego.java,e\8\e81b6767cea8d1efd4c389b89127120c24b8a3cb
 î
 dcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/CrearJuegoUseCaseTest.java,f\0\f0e31f07e3dda335826c79c833f28d734f50be22
+Ñ
+Tcardgame-demo/domain/src/main/java/org/example/cardgame/domain/JuegoEventChange.java,c\5\c5d3a8a8faf25003231c123d5142c0497ba821ff
+ä
+Zcardgame-demo/domain/src/main/java/org/example/cardgame/domain/events/JugadorAgregado.java,3\5\35a9de605886531f7580ee24bcd663ea3d2d7adb
+ë
+acardgame-demo/business/src/main/java/org/example/cardgame/usecase/gateway/model/CartaMaestra.java,f\a\fadec2e618589ef7f2b88daed99a9c943e581e9a
+ê
+`cardgame-demo/business/src/main/java/org/example/cardgame/usecase/usecase/CrearJuegoUseCase.java,b\a\baf109b3fe8436909f2d312abe1c6dce431dc3a1
+õ
+kcardgame-demo/business/src/test/java/org/example/cardgame/usecase/usecase/DeterminarGanadorUseCaseTest.java,f\6\f6478462bb8aced4ba2c3f2d405fc713f4c1c4c1
