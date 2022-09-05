@@ -1,54 +1,60 @@
-<div class="container-fluid">
-    <div class="row">
-        <main role="main" class="col-md-7 ml-sm-auto col-lg-9 px-4">
-            <div class="pb-2 ml-5 mb-3 border-bottom">
-                <h1 class="h2">Cuenta Regresiva: {{tiempo}}segundos</h1>
-                <h4>RONDA :{{numeroRonda}}
+<div class="contenedor">
+
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-md-7 ml-sm-auto col-lg-9 px-4">
+                <div class="pb-2 ml-5 mb-3 border-bottom">
+                    <h1 class="h2">Cuenta Regresiva: {{tiempo}}segundos</h1>
                     <br>
-                    <br>
-                    JUGADORES 
-                    [ {{jugadoresRonda}} / {{jugadoresTablero}} ]</h4>
-                <button mat-raised-button (click)="iniciarRonda()" disabled="{{roundStarted}}" color="primary">
-                   INICIAR
-                </button>
-            </div>
-            <div class="inner-adjust">
-                <mat-grid-list cols="6" rowHeight="1:2">
-                    <mat-grid-tile *ngFor="let card of cartasDelTablero">
-                        <mat-card class="m-2">
+                    <h4 style="color: red;">RONDA : {{numeroRonda}}</h4>
+                        <br>
+                        <br>
+                        <h4>   JUGADORES 
+                            [ {{jugadoresRonda}} / {{jugadoresTablero}} ]</h4>
+                     </div>
+                    <button style="background-color: red; width: 110px;height: 110px;" mat-fab color="warn" (click)="iniciarRonda()" disabled="{{roundStarted}}" color="primary">
+                       INICIAR
+                    </button>
+                
+                <div class="inner-adjust">
+                    <mat-grid-list  cols="6" rowHeight="1:2">
+                      <span class="cartasapostadas">Aqui van las cartas apostadas...</span>  
+                        <mat-grid-tile *ngFor="let card of cartasDelTablero">
+                            <mat-card class="m-2">
+                                <mat-card-title-group>
+                                    <img mat-card-image src="/assets/{{card.cartaId}}" />
+                                </mat-card-title-group>
+                                <mat-card-content>
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </main>
+    
+    
+            <div class="col-md-3 d-md-block sidebar-cards ">
+                <mat-grid-list cols="6" rowHeight="2:4">
+                   <h1 class="mazotitulo"> TU MAZO :</h1>
+                    <mat-grid-tile *ngFor="let card of cartasDelJugador">
+                        <mat-card *ngIf="!card.estaOculta">
                             <mat-card-title-group>
                                 <img mat-card-image src="/assets/{{card.cartaId}}" />
                             </mat-card-title-group>
                             <mat-card-content>
+                                Poder {{card.poder}}
                             </mat-card-content>
+    
+                            <mat-card-actions>
+                                <button mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada || !roundStarted}}">
+                                    USAR CARTA
+                                </button>
+                            </mat-card-actions>
                         </mat-card>
                     </mat-grid-tile>
+    
                 </mat-grid-list>
             </div>
-        </main>
-
-
-        <div class="col-md-3 d-md-block sidebar-cards ">
-            <mat-grid-list cols="6" rowHeight="2:4">
-                <mat-grid-tile *ngFor="let card of cartasDelJugador">
-                    <mat-card *ngIf="!card.estaOculta">
-
-                        <mat-card-title-group>
-                            <img mat-card-image src="/assets/{{card.cartaId}}" />
-                        </mat-card-title-group>
-                        <mat-card-content>
-                            Poder {{card.poder}}
-                        </mat-card-content>
-
-                        <mat-card-actions>
-                            <button mat-button (click)="poner(card.cartaId)" color="primary" disabled="{{!card.estaHabilitada || !roundStarted}}">
-                                MOVER A TABLERO
-                            </button>
-                        </mat-card-actions>
-                    </mat-card>
-                </mat-grid-tile>
-
-            </mat-grid-list>
         </div>
     </div>
 </div>

@@ -18,7 +18,6 @@ import reactor.test.StepVerifier;
 import static org.mockito.Mockito.when;
 
 
-//TODO: hacer prueba
 @ExtendWith(MockitoExtension.class)
 class IniciarJuegoUseCaseTest {
     @InjectMocks

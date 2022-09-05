@@ -1,23 +1,40 @@
+*{
+}
 .border-bottom{
-    margin-left: 18%
+    margin-left: 20%
+    
 }
 
+.contenedor{
+    background-image: url(/src/assets/backgroundMarvel/wp2700963-wallpaper-lego-marvel-1280-x-720.jpg)
+
+
+}
+
+button{
+    margin-left: 40%;
+}
 h4{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1{
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-// .inner-adjust{
-//     width: 100px;
-// }
 
 mat-card{
     width: 180px;
 }
 
-mat-grid-list{
-    border: solud 1px black;
+// mat-grid-list{
+//     border: solid 1px rgb(77, 77, 77);
+// }
+.cartasapostadas{
+    color: rgb(139, 139, 139);
+}
+.mazotitulo{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
